@@ -90,11 +90,11 @@ public class PdfngUtil {
         String chart = (String) PDFCache.getConfig(Constants.SystemProps.REPORT_CHART_PROP);
         String logoAlign = (String) PDFCache.getConfig(Constants.SystemProps.REPORT_LOGO_ALIGN);
 
-        String showTimeColumn = (String) PDFCache.getConfig(Constants.SystemProps.REPORT_TABLE_COLUMN_TIME);
-        String showTestNameColumn = (String) PDFCache.getConfig(Constants.SystemProps.REPORT_TABLE_COLUMN_TEST_NAME);
-        String showTestCaseColumn = (String) PDFCache.getConfig(Constants.SystemProps.REPORT_TABLE_COLUMN_TEST_CASE);
-        String showTimeTakenColumn = (String) PDFCache.getConfig(Constants.SystemProps.REPORT_TABLE_COLUMN_TIME_TAKEN);
-        String showDescriptionColumn = (String) PDFCache.getConfig(Constants.SystemProps.REPORT_TABLE_COLUMN_DESCRIPTION);
+        String showTimeColumn = PDFCache.getConfig(Constants.SystemProps.REPORT_TABLE_COLUMN_TIME).toString();
+        String showTestNameColumn = PDFCache.getConfig(Constants.SystemProps.REPORT_TABLE_COLUMN_TEST_NAME).toString();
+        String showTestCaseColumn = PDFCache.getConfig(Constants.SystemProps.REPORT_TABLE_COLUMN_TEST_CASE).toString();
+        String showTimeTakenColumn = PDFCache.getConfig(Constants.SystemProps.REPORT_TABLE_COLUMN_TIME_TAKEN).toString();
+        String showDescriptionColumn = PDFCache.getConfig(Constants.SystemProps.REPORT_TABLE_COLUMN_DESCRIPTION).toString();
 
         if (logoAlign == null || logoAlign.trim().length() == 0) {
             logoAlign = Constants.ALIGN_RIGHT;

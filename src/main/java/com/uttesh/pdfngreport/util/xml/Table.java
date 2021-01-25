@@ -61,6 +61,21 @@ public class Table {
 
     @XmlElement(name = "OSName")
     private String osName;
+    
+    @XmlElement(name = "SHOW_COLUMN_TIME")
+    String showTime;
+    
+    @XmlElement(name = "SHOW_COLUMN_TEST_NAME")
+    String showTestName;
+    
+    @XmlElement(name = "SHOW_COLUMN_TEST_CASE")
+    String showTestCase;
+    
+    @XmlElement(name = "SHOW_COLUMN_TIME_TAKEN")
+    String showTimeTaken;
+    
+    @XmlElement(name = "SHOW_COLUMN_DESCRIPTION")
+    String showDesciprtion;
 
     @XmlTransient
     public List<ColumnHeader> getColumnHeader() {
@@ -129,6 +144,51 @@ public class Table {
 
     public void setOsName(String osName) {
         this.osName = osName;
+    }
+    
+    @XmlTransient
+    public String getShowTime() {
+        return showTime;
+    }
+
+    public void setShowTime(String showTime) {
+        this.showTime = showTime;
+    }
+
+    @XmlTransient
+    public String getShowTestName() {
+        return showTestName;
+    }
+
+    public void setShowTestName(String showTestName) {
+        this.showTestName = showTestName;
+    }
+
+    @XmlTransient
+    public String getShowTestCase() {
+        return showTestCase;
+    }
+
+    public void setShowTestCase(String showTestCase) {
+        this.showTestCase = showTestCase;
+    }
+
+    @XmlTransient
+    public String getShowTimeTaken() {
+        return showTimeTaken;
+    }
+
+    public void setShowTimeTaken(String showTimeTaken) {
+        this.showTimeTaken = showTimeTaken;
+    }
+
+    @XmlTransient
+    public String getShowDesciprtion() {
+        return showDesciprtion;
+    }
+
+    public void setShowDesciprtion(String showDesciprtion) {
+        this.showDesciprtion = showDesciprtion;
     }
 
  

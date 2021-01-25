@@ -27,7 +27,7 @@ public interface Constants {
     String COLUMN_CLASS = "Test";
     String COLUMN_PACKAGE = "Package";
     String COLUMN_METHOD = "Case";
-    String COLUMN_TIME_TAKEN = "TimeTaken(ms)";
+    String COLUMN_TIME_TAKEN = "Duration(ms)";
     String COLUMN_STATUS = "Status";
     String COLUMN_TIME = "Time";
     String COLUMN_DESCRIPTION="Description";

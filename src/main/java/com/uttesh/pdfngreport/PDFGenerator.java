@@ -20,6 +20,7 @@ import com.uttesh.pdfngreport.exceptionHandler.ReportException;
 import com.uttesh.pdfngreport.handler.PdfReportHandler;
 import com.uttesh.pdfngreport.model.ResultMeta;
 import com.uttesh.pdfngreport.util.ExceptionSummary;
+import com.uttesh.pdfngreport.util.PDFCache;
 import com.uttesh.pdfngreport.util.PdfLogger;
 import com.uttesh.pdfngreport.util.PdfngUtil;
 import com.uttesh.pdfngreport.util.pdf.FailedTable;
@@ -147,6 +148,13 @@ public class PDFGenerator {
                 break;
         }
         itable.populateSingleTableData(results, table);
+        
+        table.setShowTime(PDFCache.getConfig(Constants.SystemProps.REPORT_TABLE_COLUMN_TIME).toString());
+        table.setShowTestName(PDFCache.getConfig(Constants.SystemProps.REPORT_TABLE_COLUMN_TEST_CASE).toString());
+        table.setShowTestCase(PDFCache.getConfig(Constants.SystemProps.REPORT_TABLE_COLUMN_TEST_NAME).toString());
+        table.setShowTimeTaken(PDFCache.getConfig(Constants.SystemProps.REPORT_TABLE_COLUMN_TIME_TAKEN).toString());
+        table.setShowDesciprtion(PDFCache.getConfig(Constants.SystemProps.REPORT_TABLE_COLUMN_DESCRIPTION).toString());
+        
         return table;
     }
 }
