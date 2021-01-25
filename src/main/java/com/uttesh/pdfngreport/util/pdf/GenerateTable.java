@@ -133,23 +133,6 @@ public class GenerateTable {
         meta.setShowDesciprtion(PDFCache.getConfig(Constants.SystemProps.REPORT_TABLE_COLUMN_DESCRIPTION).toString());
     }
 
-    private String populateSpace(String text) {
-        Pattern pattern = Pattern.compile("\\s");
-        Matcher matcher = pattern.matcher(text);
-        boolean found = matcher.find();
-        StringBuilder sb = new StringBuilder();
-        int limit = 20;
-        if (text.length() > limit && !found) {
-            for (int start = 0; start < text.length(); start += limit) {
-                int _size = start + limit;
-                sb.append(text.substring(start, Math.min(text.length(), _size)));
-                sb.append("\n");
-            }
-            return sb.toString();
-        }
-        return text;
-    }
-
     /**
      * This is the generic method which will populate the table data.
      *
