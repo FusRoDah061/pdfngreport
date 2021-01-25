@@ -173,11 +173,11 @@ public class GenerateTable {
                 className = str[str.length - 1];
                 if (className != null) {
                     _className = className;
-                    _className = populateSpace(_className);
+                    _className = _className;
                 }
                 String packageName = instanceName.substring(0, ((instanceName.indexOf(className)) - 1));
                 if (packageName != null) {
-                    packageName = populateSpace(packageName);
+                    packageName = packageName;
                 }
                 tableMeta.setPackagePath(packageName);
                 tableMeta.setClassName(_className);
@@ -202,7 +202,7 @@ public class GenerateTable {
             }
             tableMeta.setDescription(description);
             tableMeta.setTestContextName(testContextName);
-            tableMeta.setMethod(populateSpace(methodName));
+            tableMeta.setMethod(methodName);
             long duration = result.getEndMillis() - result.getStartMillis();
             totalExecutionTime += duration;
             tableMeta.setTimeTaken(duration + "");

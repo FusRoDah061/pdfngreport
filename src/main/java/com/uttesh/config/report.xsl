@@ -172,12 +172,12 @@
 
 					<xsl:if test="SHOW_COLUMN_TEST_CASE = 'show'">
 						<fo:table-column
-							column-width="proportional-column-width(4)" />
+							column-width="proportional-column-width(5)" />
 					</xsl:if>
 
 					<xsl:if test="SHOW_COLUMN_TIME_TAKEN = 'show'">
 						<fo:table-column
-							column-width="proportional-column-width(2)" />
+							column-width="proportional-column-width(1)" />
 					</xsl:if>
 
 					<xsl:if test="SHOW_COLUMN_DESCRIPTION = 'show'">
@@ -374,7 +374,10 @@
 					padding="1mm" margin-left="1mm">
 					<fo:block font-size="7.5pt"
 						font-family="Arial, Helvetica, Gyosho, Trado, sans-serif"
-						font-style="normal" text-align="left" wrap-option="wrap">
+						font-style="normal" text-align="left" wrap-option="wrap"
+						linefeed-treatment="preserve" 
+						white-space-collapse="false" 
+                        white-space-treatment="preserve" >
 						<xsl:value-of select="METHOD" />
 					</fo:block>
 				</fo:table-cell>
