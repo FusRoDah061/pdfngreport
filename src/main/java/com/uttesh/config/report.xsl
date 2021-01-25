@@ -75,11 +75,11 @@
 								<xsl:choose>
 									<xsl:when test="(ReportData/OSName)='w'">
 										<fo:external-graphic content-width="2in"
-											src="url(file:/{ReportData/LogoFile})" content-height="2cm" />
+											src="url(file:/{ReportData/LogoFile})" content-height="1cm" />
 									</xsl:when>
 									<xsl:otherwise>
 										<fo:external-graphic content-width="2in"
-											src="{ReportData/LogoFile}" content-height="2cm" />
+											src="{ReportData/LogoFile}" content-height="1cm" />
 									</xsl:otherwise>
 								</xsl:choose>
 							</fo:block>
